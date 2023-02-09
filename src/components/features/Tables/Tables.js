@@ -15,7 +15,9 @@ const Tables = () => {
       </Col>
       <Col xs={8}>
         <Card.Text><strong>Status: </strong>{table.status}</Card.Text>
-        </Col>
+        {table.status === "Busy" &&
+        <Card.Text><strong>Bill: </strong>${table.bill}</Card.Text>}
+      </Col>
       <Col>
       <Link to={'/table/' + table.id}>
         <Button variant='primary'>Show more</Button>

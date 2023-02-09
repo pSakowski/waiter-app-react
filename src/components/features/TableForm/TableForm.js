@@ -21,10 +21,10 @@ const TableForm = ({ action, ...props }) => {
 
   return (
     <>
-    <h1 className='my-3'>
-      <strong>Table {table}</strong>
-    </h1>
     <Form onSubmit={handleSubmit}>
+      <h1 className='my-3'>
+        <strong>Table {table}</strong>
+      </h1>
       <Form.Group className='my-3 align-items-center d-flex w-50'>
         <FormLabel className='me-3 mt-2'>
           <strong>Status:</strong>
@@ -52,7 +52,7 @@ const TableForm = ({ action, ...props }) => {
         $ <Form.Control type='text' value={bill} onChange={e=>setBill(e.target.value)} className='w-25 text-center' />
       </Form.Group>
       }
-      <Button type='submit'>Update</Button>
+      <Button type="submit">Update</Button>
     </Form>
     </>
   );
