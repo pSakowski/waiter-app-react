@@ -1,4 +1,6 @@
-LINK TO APP : https://waiter-app-react.psakowski1213.repl.co
+# Link to React App : 
+
+https://waiter-app-react.psakowski1213.repl.co
 
 # Getting Started with Create React App
 
