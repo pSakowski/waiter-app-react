@@ -29,9 +29,8 @@ export const editTableRequest = (editTableData) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(editTableData),
-
     };
-    fetch(API_URL + '/tables' + editTableData.id, options)
+    fetch(API_URL + '/tables/' + editTableData.id, options)
       .then(() => dispatch(editTable(editTableData)));
   };
 };
@@ -39,9 +38,9 @@ export const editTableRequest = (editTableData) => {
 const tablesReducer = (statePart = [], action) => {
   switch (action.type) {
     case UPDATE_TABLE:
-      return [...action.payload]
+      return [...action.payload];
     case EDIT_TABLE:
-      return statePart.map(table => (table.id === action.payload.id ?{ ...table, ...action.payload } : table));
+      return statePart.map(table => (table.id === action.payload.id ? { ...table, ...action.payload } : table));
     default:
       return statePart;
   };
